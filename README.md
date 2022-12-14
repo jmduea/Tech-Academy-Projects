@@ -5,7 +5,8 @@ This repository contains all of the code used in my projects for the Tech Academ
 
 ## Table of Contents
 [HTML/CSS Projects](https://github.com/jmduea/Tech-Academy-Projects/tree/main/HTML%2BCSS%2BJS_Projects)
-
+<br>
+[Javascript Projects](https://github.com/jmduea/Tech-Academy-Projects/tree/main/Javascript%2bProjects)
 ## Authors
 
 - [@jmduea](https://www.github.com/jmduea)
