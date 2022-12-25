@@ -4,6 +4,7 @@
 		<title>GetGoodCoachingServices&copy;</title>
 		<meta charset="utf-8">
 		<link rel="stylesheet"	href="./css/one_page_website.css">
+		<script src="./JS/one_page_website.js"></script>
 	</head>
 	<body>
 
@@ -11,9 +12,9 @@
 		<div class="wrap">
 			<div class="menu-container">
 				<ul class="menu">
-					<a href="#home"><li>Home</li></a>
-					<a href="#gamer_news"><li>POE Trailer Hype</li></a>
-					<a href="#contact"><li>Contact me to learn more!</li></a>
+					<a href="#home" onclick="closeModal()"><li>Home</li></a>
+					<a href="#gamer_news" onclick="closeModal()"><li>POE Trailer Hype</li></a>
+					<a href="#contact" onclick="closeModal()"><li>Contact me to learn more!</li></a>
 				</ul>
 			</div>
 		</div>
@@ -24,29 +25,37 @@
 			<div class="container">
 				<div class="text-center">
 				<h1>Games I offer coaching for:</h1>
-				</div>
+				</div> 
 				<div class="flex-container">
-					
-					<!-- Photo-Container 1-->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/tft.jpg" alt="Team Fight Tactics from Riot Games" width="500" height="250">
-						</div>
+
+			<!-- Images used to open the lightbox -->
+
+			<!-- Photo-Container 1-->
+				<div class="photo-container">
+					<div class="photo">
+					<img src="./images/tft.jpg" style="width:100%" 
+							onclick="openModal();currentSlide(1)"
+							class="hover-shadow cursor" alt="Teamfight Tactics">
 					</div>
-					<!-- End of Photo-Container 1-->
+				</div>
+			<!-- End of Photo-Container 1-->
 					
-					<!-- Photo-Container 2-->
-					<div class="photo-container">
-						<div class="photo">
-							<img src="./images/lol.jpg" alt="League of Legends from Riot Games" width="500" height="250">
-						</div>
+			<!-- Photo-Container 2-->
+				<div class="photo-container">
+					<div class="photo">
+					<img src="./images/lol.jpg" style="width:100%" 
+							onclick="openModal();currentSlide(2)"
+							class="hover-shadow cursor" alt="League of Legends">
 					</div>
-					<!-- End of Photo-Container 2-->
+				</div>
+			<!-- End of Photo-Container 2-->
 					
 					<!-- Photo-Container 3-->
 					<div class="photo-container">
 						<div class="photo">
-							<img src="./images/poe.jpg" alt="Path of Exile from Grinding Gear Games" width="500" height="250">
+							<img src="./images/poe.jpg" style="width:100%" 
+							onclick="openModal();currentSlide(3)"
+							class="hover-shadow cursor" alt="Path of Exile">
 						</div>
 					</div>
 					<!-- End of Photo-Container 3-->
@@ -55,7 +64,52 @@
 		</div>
 	</div>
 	<!-- End of Home -->
+	<!-- The Modal/Lightbox -->
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
 	
+		<div class="mySlides">
+			<div class="numbertext">1 / 3</div>
+			<img src="./Images/tft.jpg" style="width:100%">
+		</div>
+	
+		<div class="mySlides">
+			<div class="numbertext">2 / 3</div>
+			<img src="./Images/lol.jpg" style="width:100%">
+		</div>
+	
+		<div class="mySlides">
+			<div class="numbertext">3 / 3</div>
+			<img src="./Images/poe.jpg" style="width:100%">
+		</div>
+	
+		<!-- Next/previous controls -->
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	
+		<!-- Caption text -->
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+	
+		<!-- Thumbnail image controls -->
+		<div class="column">
+			<img class="demo" src="./Images/tft_thumbnail.jpg" style="width:100%"
+			 onclick="currentSlide(1)" alt="Teamfight Tactics">
+		</div>
+	
+		<div class="column">
+			<img class="demo" src="./Images/lol_thumbnail.jpg" style="width:100%"
+			onclick="currentSlide(2)" alt="League of Legends">
+		</div>
+	
+		<div class="column">
+			<img class="demo" src="./Images/poe.thumbnail.jpg" style="width:100%"
+			onclick="currentSlide(3)" alt="Path of Exile">
+		</div>
+		</div>
+	</div>
 	
 	<!-- POE Trailer -->
 	<section>
